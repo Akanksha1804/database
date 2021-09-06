@@ -1,0 +1,655 @@
+SQL> create table users(name varchar(20),email varchar(20));
+
+Table created.
+
+SQL> insert into users values('&name','&email');
+Enter value for name: aishu
+Enter value for email: aishu@gmail.com
+old   1: insert into users values('&name','&email')
+new   1: insert into users values('aishu','aishu@gmail.com')
+
+1 row created.
+
+SQL> /
+Enter value for name: anshu
+Enter value for email: anshu@gmail.com
+old   1: insert into users values('&name','&email')
+new   1: insert into users values('anshu','anshu@gmail.com')
+
+1 row created.
+
+SQL> /
+Enter value for name: ruhi
+Enter value for email: ruhi@gmail.com
+old   1: insert into users values('&name','&email')
+new   1: insert into users values('ruhi','ruhi@gmail.com')
+
+1 row created.
+
+SQL> /
+Enter value for name: cherry
+Enter value for email: cherry@gmail.com
+old   1: insert into users values('&name','&email')
+new   1: insert into users values('cherry','cherry@gmail.com')
+
+1 row created.
+
+SQL> /
+Enter value for name: rishi
+Enter value for email: rishi@gmail.com
+old   1: insert into users values('&name','&email')
+new   1: insert into users values('rishi','rishi@gmail.com')
+
+1 row created.
+
+SQL> select * from users;
+
+NAME                 EMAIL                                                      
+-------------------- --------------------                                       
+aishu                aishu@gmail.com                                            
+anshu                anshu@gmail.com                                            
+ruhi                 ruhi@gmail.com                                             
+cherry               cherry@gmail.com                                           
+rishi                rishi@gmail.com                                            
+
+SQL> create table codekata(name varchar(20), problems_solved number(20));
+
+Table created.
+
+SQL> insert into codekata('&name','&problems_solved');
+Enter value for name: rishi
+Enter value for problems_solved: 10
+old   1: insert into codekata('&name','&problems_solved')
+new   1: insert into codekata('rishi','10')
+insert into codekata('rishi','10')
+                     *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> /
+Enter value for name: 
+Enter value for problems_solved: 
+old   1: insert into codekata('&name','&problems_solved')
+new   1: insert into codekata('','')
+insert into codekata('','')
+                     *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> insert into codekata values('&name','&problems_solved');
+Enter value for name: rishi
+Enter value for problems_solved: 10
+old   1: insert into codekata values('&name','&problems_solved')
+new   1: insert into codekata values('rishi','10')
+
+1 row created.
+
+SQL> /
+Enter value for name: cherry
+Enter value for problems_solved: 20
+old   1: insert into codekata values('&name','&problems_solved')
+new   1: insert into codekata values('cherry','20')
+
+1 row created.
+
+SQL> /
+Enter value for name: ruhi
+Enter value for problems_solved: 30
+old   1: insert into codekata values('&name','&problems_solved')
+new   1: insert into codekata values('ruhi','30')
+
+1 row created.
+
+SQL> /
+Enter value for name: anshu
+Enter value for problems_solved: 40
+old   1: insert into codekata values('&name','&problems_solved')
+new   1: insert into codekata values('anshu','40')
+
+1 row created.
+
+SQL> /
+Enter value for name: aishu
+Enter value for problems_solved: 50
+old   1: insert into codekata values('&name','&problems_solved')
+new   1: insert into codekata values('aishu','50')
+
+1 row created.
+
+SQL> select * from codekata;
+
+NAME                 PROBLEMS_SOLVED                                            
+-------------------- ---------------                                            
+rishi                             10                                            
+cherry                            20                                            
+ruhi                              30                                            
+anshu                             40                                            
+aishu                             50                                            
+
+SQL> create table attendance( name varchar(20), classes_attended number(10));
+
+Table created.
+
+SQL> insert into attendance values('&name','&classes_attended');
+Enter value for name: ruhi
+Enter value for classes_attended: 11
+old   1: insert into attendance values('&name','&classes_attended')
+new   1: insert into attendance values('ruhi','11')
+
+1 row created.
+
+SQL> /
+Enter value for name: anshu
+Enter value for classes_attended: 12
+old   1: insert into attendance values('&name','&classes_attended')
+new   1: insert into attendance values('anshu','12')
+
+1 row created.
+
+SQL> /
+Enter value for name: aishu
+Enter value for classes_attended: 13
+old   1: insert into attendance values('&name','&classes_attended')
+new   1: insert into attendance values('aishu','13')
+
+1 row created.
+
+SQL> /
+Enter value for name: rishi
+Enter value for classes_attended: 14
+old   1: insert into attendance values('&name','&classes_attended')
+new   1: insert into attendance values('rishi','14')
+
+1 row created.
+
+SQL> /
+Enter value for name: cherry
+Enter value for classes_attended: 15
+old   1: insert into attendance values('&name','&classes_attended')
+new   1: insert into attendance values('cherry','15')
+
+1 row created.
+
+SQL> select * from attendance;
+
+NAME                 CLASSES_ATTENDED                                           
+-------------------- ----------------                                           
+ruhi                               11                                           
+anshu                              12                                           
+aishu                              13                                           
+rishi                              14                                           
+cherry                             15                                           
+
+SQL> create table topics( course varchar(20),topic varchar(20));
+
+Table created.
+
+SQL> insert into topics values('&course','&topic');
+Enter value for course: frontend
+Enter value for topic: html
+old   1: insert into topics values('&course','&topic')
+new   1: insert into topics values('frontend','html')
+
+1 row created.
+
+SQL> /
+Enter value for course: frontend
+Enter value for topic: css
+old   1: insert into topics values('&course','&topic')
+new   1: insert into topics values('frontend','css')
+
+1 row created.
+
+SQL> /
+Enter value for course: frontend
+Enter value for topic: javascript
+old   1: insert into topics values('&course','&topic')
+new   1: insert into topics values('frontend','javascript')
+
+1 row created.
+
+SQL> /
+Enter value for course: backend
+Enter value for topic: sql
+old   1: insert into topics values('&course','&topic')
+new   1: insert into topics values('backend','sql')
+
+1 row created.
+
+SQL> /
+Enter value for course: programming
+Enter value for topic: python
+old   1: insert into topics values('&course','&topic')
+new   1: insert into topics values('programming','python')
+
+1 row created.
+
+SQL> select * from topics;
+
+COURSE               TOPIC                                                      
+-------------------- --------------------                                       
+frontend             html                                                       
+frontend             css                                                        
+frontend             javascript                                                 
+backend              sql                                                        
+programming          python                                                     
+
+SQL> create table tasks(course varchar(20), task varchar(100));
+
+Table created.
+
+SQL> insert into tasks values('&course','&task');
+Enter value for course: frontend
+Enter value for task: create a web page
+old   1: insert into tasks values('&course','&task')
+new   1: insert into tasks values('frontend','create a web page')
+
+1 row created.
+
+SQL> /
+Enter value for course: frontend
+Enter value for task: style a web page
+old   1: insert into tasks values('&course','&task')
+new   1: insert into tasks values('frontend','style a web page')
+
+1 row created.
+
+SQL> /
+Enter value for course: frontend
+Enter value for task: add event handling
+old   1: insert into tasks values('&course','&task')
+new   1: insert into tasks values('frontend','add event handling')
+
+1 row created.
+
+SQL> /
+Enter value for course: backend
+Enter value for task: query
+old   1: insert into tasks values('&course','&task')
+new   1: insert into tasks values('backend','query')
+
+1 row created.
+
+SQL> /
+Enter value for course: programming
+Enter value for task: coding
+old   1: insert into tasks values('&course','&task')
+new   1: insert into tasks values('programming','coding')
+
+1 row created.
+
+SQL> select * from tasks;
+
+COURSE                                                                          
+--------------------                                                            
+TASK                                                                            
+--------------------------------------------------------------------------------
+frontend                                                                        
+create a web page                                                               
+                                                                                
+frontend                                                                        
+style a web page                                                                
+                                                                                
+frontend                                                                        
+add event handling                                                              
+                                                                                
+
+COURSE                                                                          
+--------------------                                                            
+TASK                                                                            
+--------------------------------------------------------------------------------
+backend                                                                         
+query                                                                           
+                                                                                
+programming                                                                     
+coding                                                                          
+                                                                                
+
+SQL> set linesize=120;
+SP2-0268: linesize option not a valid number
+SQL> set linesize 120;
+SQL> set pagesize 120;
+SQL> select * from tasks;
+
+COURSE                                                                                                                  
+--------------------                                                                                                    
+TASK                                                                                                                    
+----------------------------------------------------------------------------------------------------                    
+frontend                                                                                                                
+create a web page                                                                                                       
+                                                                                                                        
+frontend                                                                                                                
+style a web page                                                                                                        
+                                                                                                                        
+frontend                                                                                                                
+add event handling                                                                                                      
+                                                                                                                        
+backend                                                                                                                 
+query                                                                                                                   
+                                                                                                                        
+programming                                                                                                             
+coding                                                                                                                  
+                                                                                                                        
+
+SQL> set linesize 200;
+SQL> set pagesize 200;
+SQL> select * from tasks;
+
+COURSE               TASK                                                                                                                                                                               
+-------------------- ----------------------------------------------------------------------------------------------------                                                                               
+frontend             create a web page                                                                                                                                                                  
+frontend             style a web page                                                                                                                                                                   
+frontend             add event handling                                                                                                                                                                 
+backend              query                                                                                                                                                                              
+programming          coding                                                                                                                                                                             
+
+SQL> create table company_drives(name varchar(20), drives_attended number(10));
+
+Table created.
+
+SQL> insert into company_drives values('&name','drives_attended');
+Enter value for name: aishu
+old   1: insert into company_drives values('&name','drives_attended')
+new   1: insert into company_drives values('aishu','drives_attended')
+insert into company_drives values('aishu','drives_attended')
+                                          *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> insert into company_drives values('&name','&drives_attended');
+Enter value for name: aishu
+Enter value for drives_attended: 1
+old   1: insert into company_drives values('&name','&drives_attended')
+new   1: insert into company_drives values('aishu','1')
+
+1 row created.
+
+SQL> /
+Enter value for name: anshu
+Enter value for drives_attended: 2
+old   1: insert into company_drives values('&name','&drives_attended')
+new   1: insert into company_drives values('anshu','2')
+
+1 row created.
+
+SQL> /
+Enter value for name: ruhi
+Enter value for drives_attended: 3
+old   1: insert into company_drives values('&name','&drives_attended')
+new   1: insert into company_drives values('ruhi','3')
+
+1 row created.
+
+SQL> /
+Enter value for name: cherry
+Enter value for drives_attended: 4
+old   1: insert into company_drives values('&name','&drives_attended')
+new   1: insert into company_drives values('cherry','4')
+
+1 row created.
+
+SQL> /
+Enter value for name: rishi
+Enter value for drives_attended: 5
+old   1: insert into company_drives values('&name','&drives_attended')
+new   1: insert into company_drives values('rishi','5')
+
+1 row created.
+
+SQL> select * from company_drives;
+
+NAME                 DRIVES_ATTENDED                                                                                                                                                                    
+-------------------- ---------------                                                                                                                                                                    
+aishu                              1                                                                                                                                                                    
+anshu                              2                                                                                                                                                                    
+ruhi                               3                                                                                                                                                                    
+cherry                             4                                                                                                                                                                    
+rishi                              5                                                                                                                                                                    
+
+SQL> create table mentors( mentor varchar(20), student_name varchar(20));
+
+Table created.
+
+SQL> insert into mentors values('&mentor','&student_name');
+Enter value for mentor: x
+Enter value for student_name: anshu
+old   1: insert into mentors values('&mentor','&student_name')
+new   1: insert into mentors values('x','anshu')
+
+1 row created.
+
+SQL> /
+Enter value for mentor: x
+Enter value for student_name: aishu
+old   1: insert into mentors values('&mentor','&student_name')
+new   1: insert into mentors values('x','aishu')
+
+1 row created.
+
+SQL> /
+Enter value for mentor: y
+Enter value for student_name: rishi
+old   1: insert into mentors values('&mentor','&student_name')
+new   1: insert into mentors values('y','rishi')
+
+1 row created.
+
+SQL> /
+Enter value for mentor: y
+Enter value for student_name: ruhi
+old   1: insert into mentors values('&mentor','&student_name')
+new   1: insert into mentors values('y','ruhi')
+
+1 row created.
+
+SQL> /
+Enter value for mentor: z
+Enter value for student_name: cherry
+old   1: insert into mentors values('&mentor','&student_name')
+new   1: insert into mentors values('z','cherry')
+
+1 row created.
+
+SQL> select * from mentors;
+
+MENTOR               STUDENT_NAME                                                                                                                                                                       
+-------------------- --------------------                                                                                                                                                               
+x                    anshu                                                                                                                                                                              
+x                    aishu                                                                                                                                                                              
+y                    rishi                                                                                                                                                                              
+y                    ruhi                                                                                                                                                                               
+z                    cherry                                                                                                                                                                             
+
+SQL> create table student_activated_courses values('&name','&activated_course');
+Enter value for name: aishu
+Enter value for activated_course: frontend
+old   1: create table student_activated_courses values('&name','&activated_course')
+new   1: create table student_activated_courses values('aishu','frontend')
+create table student_activated_courses values('aishu','frontend')
+                                       *
+ERROR at line 1:
+ORA-00922: missing or invalid option 
+
+
+SQL> create table student_activated_courses(name varchar(20), activated_course varchar(20));
+
+Table created.
+
+SQL> insert into student_activated_courses values('&name','&activated_course');
+Enter value for name: aishu
+Enter value for activated_course: frontend
+old   1: insert into student_activated_courses values('&name','&activated_course')
+new   1: insert into student_activated_courses values('aishu','frontend')
+
+1 row created.
+
+SQL> /
+Enter value for name: anshu
+Enter value for activated_course: frontend
+old   1: insert into student_activated_courses values('&name','&activated_course')
+new   1: insert into student_activated_courses values('anshu','frontend')
+
+1 row created.
+
+SQL> /
+Enter value for name: cherry
+Enter value for activated_course: backend
+old   1: insert into student_activated_courses values('&name','&activated_course')
+new   1: insert into student_activated_courses values('cherry','backend')
+
+1 row created.
+
+SQL> /
+Enter value for name: rishi
+Enter value for activated_course: backend
+old   1: insert into student_activated_courses values('&name','&activated_course')
+new   1: insert into student_activated_courses values('rishi','backend')
+
+1 row created.
+
+SQL> /
+Enter value for name: ruhi
+Enter value for activated_course: programming
+old   1: insert into student_activated_courses values('&name','&activated_course')
+new   1: insert into student_activated_courses values('ruhi','programming')
+
+1 row created.
+
+SQL> select * from student_activated_courses;
+
+NAME                 ACTIVATED_COURSE                                                                                                                                                                   
+-------------------- --------------------                                                                                                                                                               
+aishu                frontend                                                                                                                                                                           
+anshu                frontend                                                                                                                                                                           
+cherry               backend                                                                                                                                                                            
+rishi                backend                                                                                                                                                                            
+ruhi                 programming                                                                                                                                                                        
+
+SQL> create table courses( name varchar(20), course varchar(20));
+
+Table created.
+
+SQL> insert into courses values('&name','&course');
+Enter value for name: ruhi
+Enter value for course: programming,frontend
+old   1: insert into courses values('&name','&course')
+new   1: insert into courses values('ruhi','programming,frontend')
+
+1 row created.
+
+SQL> /
+Enter value for name: rishi
+Enter value for course: backend,programming
+old   1: insert into courses values('&name','&course')
+new   1: insert into courses values('rishi','backend,programming')
+
+1 row created.
+
+SQL> /
+Enter value for name: cherry
+Enter value for course: backend,frontend
+old   1: insert into courses values('&name','&course')
+new   1: insert into courses values('cherry','backend,frontend')
+
+1 row created.
+
+SQL> /
+Enter value for name: anshu
+Enter value for course: frontend,programming
+old   1: insert into courses values('&name','&course')
+new   1: insert into courses values('anshu','frontend,programming')
+
+1 row created.
+
+SQL> /
+Enter value for name: aishu
+Enter value for course: frontend,backend
+old   1: insert into courses values('&name','&course')
+new   1: insert into courses values('aishu','frontend,backend')
+
+1 row created.
+
+SQL> select * from courses;
+
+NAME                 COURSE                                                                                                                                                                             
+-------------------- --------------------                                                                                                                                                               
+ruhi                 programming,frontend                                                                                                                                                               
+rishi                backend,programming                                                                                                                                                                
+cherry               backend,frontend                                                                                                                                                                   
+anshu                frontend,programming                                                                                                                                                               
+aishu                frontend,backend                                                                                                                                                                   
+
+SQL> select users.name,email,problems_solved from users join codekata on users.name=codekata.name;
+
+NAME                 EMAIL                PROBLEMS_SOLVED                                                                                                                                               
+-------------------- -------------------- ---------------                                                                                                                                               
+rishi                rishi@gmail.com                   10                                                                                                                                               
+cherry               cherry@gmail.com                  20                                                                                                                                               
+ruhi                 ruhi@gmail.com                    30                                                                                                                                               
+anshu                anshu@gmail.com                   40                                                                                                                                               
+aishu                aishu@gmail.com                   50                                                                                                                                               
+
+SQL> select * from company_drives;
+
+NAME                 DRIVES_ATTENDED                                                                                                                                                                    
+-------------------- ---------------                                                                                                                                                                    
+aishu                              1                                                                                                                                                                    
+anshu                              2                                                                                                                                                                    
+ruhi                               3                                                                                                                                                                    
+cherry                             4                                                                                                                                                                    
+rishi                              5                                                                                                                                                                    
+
+SQL> select courses.name,course,activated_course from courses join students_activated_courses on courses.name=students_activated_courses.name group by course,activated_course,courses.name;
+select courses.name,course,activated_course from courses join students_activated_courses on courses.name=students_activated_courses.name group by course,activated_course,courses.name
+                                                              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select courses.name,course,activated_course from courses join student_activated_courses on courses.name=student_activated_courses.name group by course,activated_course,courses.name;
+
+NAME                 COURSE               ACTIVATED_COURSE                                                                                                                                              
+-------------------- -------------------- --------------------                                                                                                                                          
+aishu                frontend,backend     frontend                                                                                                                                                      
+anshu                frontend,programming frontend                                                                                                                                                      
+rishi                backend,programming  backend                                                                                                                                                       
+cherry               backend,frontend     backend                                                                                                                                                       
+ruhi                 programming,frontend programming                                                                                                                                                   
+
+SQL> select courses.name,course,activated_course from courses join student_activated_courses on courses.name=student_activated_courses.name group by course,activated_course,courses.name;
+
+NAME                 COURSE               ACTIVATED_COURSE                                                                                                                                              
+-------------------- -------------------- --------------------                                                                                                                                          
+aishu                frontend,backend     frontend                                                                                                                                                      
+anshu                frontend,programming frontend                                                                                                                                                      
+rishi                backend,programming  backend                                                                                                                                                       
+cherry               backend,frontend     backend                                                                                                                                                       
+ruhi                 programming,frontend programming                                                                                                                                                   
+
+SQL> select distinct(mentor) from mentors;
+
+MENTOR                                                                                                                                                                                                  
+--------------------                                                                                                                                                                                    
+z                                                                                                                                                                                                       
+x                                                                                                                                                                                                       
+y                                                                                                                                                                                                       
+
+SQL> select mentor,count(student_name) from mentors group by mentors;
+select mentor,count(student_name) from mentors group by mentors
+                                                        *
+ERROR at line 1:
+ORA-00904: "MENTORS": invalid identifier 
+
+
+SQL> select mentor,count(student_name) from mentors group by mentor;
+
+MENTOR               COUNT(STUDENT_NAME)                                                                                                                                                                
+-------------------- -------------------                                                                                                                                                                
+z                                      1                                                                                                                                                                
+x                                      2                                                                                                                                                                
+y                                      2                                                                                                                                                                
+
+SQL> spool off;
