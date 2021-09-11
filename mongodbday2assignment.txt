@@ -1,0 +1,351 @@
+USERS:
+
+> db.users.insertOne({ "name" : "craig" , "email" : "craig@gmail.com"});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c785984fb465107430532")
+}
+> db.users.insertOne({ "name" : "steel" , "email" : "steel@gmail.com"});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c786b84fb465107430533")
+}
+> db.users.insertOne({ "name" : "John" , "email" : "john@gmail.com"});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c787e84fb465107430534")
+}
+> db.users.insertOne({ "name" : "Mirinda" , "email" : "mirinda@gmail.com"});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c789184fb465107430535")
+}
+> db.users.insertOne({ "name" : "Grey" , "email" : "grey@gmail.com"});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c78a784fb465107430536")
+}
+> db.users.find();
+{ "_id" : ObjectId("613c785984fb465107430532"), "name" : "craig", "email" : "craig@gmail.com" }
+{ "_id" : ObjectId("613c786b84fb465107430533"), "name" : "steel", "email" : "steel@gmail.com" }
+{ "_id" : ObjectId("613c787e84fb465107430534"), "name" : "John", "email" : "john@gmail.com" }
+{ "_id" : ObjectId("613c789184fb465107430535"), "name" : "Mirinda", "email" : "mirinda@gmail.com" }
+{ "_id" : ObjectId("613c78a784fb465107430536"), "name" : "Grey", "email" : "grey@gmail.com" }
+
+
+
+CODEKATA:
+
+> db.codekata.insertOne({ "name" : "craig" , "solved" : 15 , "unsolved" : 5 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c65c984fb465107430522")
+}
+> db.codekata.insertOne({ "name" : "steel" , "solved" : 18 , "unsolved" : 2 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c65dc84fb465107430523")
+}
+> db.codekata.insertOne({ "name" : "Grey" , "solved" : 17 , "unsolved" : 3 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c65fe84fb465107430524")
+}
+> db.codekata.insertOne({ "name" : "Mirinda" , "solved" : 16 , "unsolved" : 4 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c663584fb465107430525")
+}
+> db.codekata.insertOne({ "name" : "John" , "solved" : 13 , "unsolved" : 7 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c665384fb465107430526")
+}
+> db.codekata.find();
+{ "_id" : ObjectId("613c65c984fb465107430522"), "name" : "craig", "solved" : 15, "unsolved" : 5 }
+{ "_id" : ObjectId("613c65dc84fb465107430523"), "name" : "steel", "solved" : 18, "unsolved" : 2 }
+{ "_id" : ObjectId("613c65fe84fb465107430524"), "name" : "Grey", "solved" : 17, "unsolved" : 3 }
+{ "_id" : ObjectId("613c663584fb465107430525"), "name" : "Mirinda", "solved" : 16, "unsolved" : 4 }
+{ "_id" : ObjectId("613c665384fb465107430526"), "name" : "John", "solved" : 13, "unsolved" : 7 }
+
+
+
+ATTENDANCE:
+
+
+> db.attendance.insertOne( { "date" : ISODate("2020-10-01"), "students_absent" :1 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c719384fb46510743052d")
+}
+> db.attendance.insertOne( { "date" : ISODate("2020-11-01"), "students_absent" :2 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c71a284fb46510743052e")
+}
+> db.attendance.insertOne( { "date" : ISODate("2020-04-01"), "students_absent" :3 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c71b784fb46510743052f")
+}
+> db.attendance.insertOne( { "date" : ISODate("2020-10-21"), "students_absent" :4 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c71c784fb465107430530")
+}
+> db.attendance.insertOne( { "date" : ISODate("2020-07-12"), "students_absent" :5 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c71dd84fb465107430531")
+}
+> db.attendance.find();
+{ "_id" : ObjectId("613c719384fb46510743052d"), "date" : ISODate("2020-10-01T00:00:00Z"), "students_absent" : 1 }
+{ "_id" : ObjectId("613c71a284fb46510743052e"), "date" : ISODate("2020-11-01T00:00:00Z"), "students_absent" : 2 }
+{ "_id" : ObjectId("613c71b784fb46510743052f"), "date" : ISODate("2020-04-01T00:00:00Z"), "students_absent" : 3 }
+{ "_id" : ObjectId("613c71c784fb465107430530"), "date" : ISODate("2020-10-21T00:00:00Z"), "students_absent" : 4 }
+{ "_id" : ObjectId("613c71dd84fb465107430531"), "date" : ISODate("2020-07-12T00:00:00Z"), "students_absent" : 5 }
+
+
+
+
+TOPICS:
+
+> db.topics.insertOne({ "topic" : "html" , "date" : new ISODate("2020-10-01") });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c513284fb46510743050b")
+}
+> db.topics.insertOne({ "topic" : "css" , "date" : new ISODate("2020-11-01") });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c514284fb46510743050c")
+}
+> db.topics.insertOne({ "topic" : "javascript" , "date" : new ISODate("2020-04-01") });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c515684fb46510743050d")
+}
+> db.topics.insertOne({ "topic" : "java" , "date" : new ISODate("2020-10-21") });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c517184fb46510743050e")
+}
+> db.topics.insertOne({ "topic" : "python" , "date" : new ISODate("2020-07-12") });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c519084fb46510743050f")
+}
+> db.topics.find();
+{ "_id" : ObjectId("613c513284fb46510743050b"), "topic" : "html", "date" : ISODate("2020-10-01T00:00:00Z") }
+{ "_id" : ObjectId("613c514284fb46510743050c"), "topic" : "css", "date" : ISODate("2020-11-01T00:00:00Z") }
+{ "_id" : ObjectId("613c515684fb46510743050d"), "topic" : "javascript", "date" : ISODate("2020-04-01T00:00:00Z") }
+{ "_id" : ObjectId("613c517184fb46510743050e"), "topic" : "java", "date" : ISODate("2020-10-21T00:00:00Z") }
+{ "_id" : ObjectId("613c519084fb46510743050f"), "topic" : "python", "date" : ISODate("2020-07-12T00:00:00Z") }
+
+
+
+TASKS:
+
+
+> db.tasks.insertOne( { "task" : "create a web page", "date" : new ISODate("2020-10-01"), "not_submitted": 1 } );
+> db.tasks.insertOne( { "task" : "style a web page", "date" : new ISODate("2020-11-01"), "not_submitted": 2 } );
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c5a7a84fb465107430511")
+}
+> db.tasks.insertOne( { "task" : "add events", "date" : new ISODate("2020-04-01"), "not_submitted": 3 } );
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c5aa984fb465107430512")
+}
+> db.tasks.insertOne( { "task" : "programming", "date" : new ISODate("2020-10-21"), "not_submitted": 4 } );
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c5acf84fb465107430513")
+}
+> db.tasks.insertOne( { "task" : "coding", "date" : new ISODate("2020-07-12"), "not_submitted": 5 } );
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c5b0984fb465107430514")
+}
+> db.tasks.find();
+{ "_id" : ObjectId("613c5a4a84fb465107430510"), "task" : "create a web page", "date" : ISODate("2020-10-01T00:00:00Z"), "not_submitted" : 1 }
+{ "_id" : ObjectId("613c5a7a84fb465107430511"), "task" : "style a web page", "date" : ISODate("2020-11-01T00:00:00Z"), "not_submitted" : 2 }
+{ "_id" : ObjectId("613c5aa984fb465107430512"), "task" : "add events", "date" : ISODate("2020-04-01T00:00:00Z"), "not_submitted" : 3 }
+{ "_id" : ObjectId("613c5acf84fb465107430513"), "task" : "programming", "date" : ISODate("2020-10-21T00:00:00Z"), "not_submitted" : 4 }
+{ "_id" : ObjectId("613c5b0984fb465107430514"), "task" : "coding", "date" : ISODate("2020-07-12T00:00:00Z"), "not_submitted" : 5 }
+
+
+
+COMPANY_DRIVES:
+
+
+> db.company_drives.insertOne( { "company": "a" , "date": ISODate("2020-10-01") , "students_attended":["craig","steel"]}) ;
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c625e84fb46510743051d")
+}
+> db.company_drives.insertOne( { "company": "b" , "date": ISODate("2020-11-01") , "students_attended":["Grey","Mirinda"]}) ;
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c627f84fb46510743051e")
+}
+> db.company_drives.insertOne( { "company": "c" , "date": ISODate("2020-04-01") , "students_attended":["Grey","John"]}) ;
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c62a684fb46510743051f")
+}
+> db.company_drives.insertOne( { "company": "d" , "date": ISODate("2020-10-21") , "students_attended":["Mirinda","John"]}) ;
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c62cd84fb465107430520")
+}
+> db.company_drives.insertOne( { "company": "e" , "date": ISODate("2020-07-12") , "students_attended":["steel","craig"]}) ;
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c630b84fb465107430521")
+}
+> db.company_drives.find();
+{ "_id" : ObjectId("613c625e84fb46510743051d"), "company" : "a", "date" : ISODate("2020-10-01T00:00:00Z"), "students_attended" : [ "craig", "steel" ] }
+{ "_id" : ObjectId("613c627f84fb46510743051e"), "company" : "b", "date" : ISODate("2020-11-01T00:00:00Z"), "students_attended" : [ "Grey", "Mirinda" ] }
+{ "_id" : ObjectId("613c62a684fb46510743051f"), "company" : "c", "date" : ISODate("2020-04-01T00:00:00Z"), "students_attended" : [ "Grey", "John" ] }
+{ "_id" : ObjectId("613c62cd84fb465107430520"), "company" : "d", "date" : ISODate("2020-10-21T00:00:00Z"), "students_attended" : [ "Mirinda", "John" ] }
+{ "_id" : ObjectId("613c630b84fb465107430521"), "company" : "e", "date" : ISODate("2020-07-12T00:00:00Z"), "students_attended" : [ "steel", "craig" ] }
+
+
+
+MENTORS:
+
+
+> db.mentors.insertOne({ "mentor" : "ratan" , "mentee_count" : 10 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c67b684fb465107430527")
+}
+> db.mentors.insertOne({ "mentor" : "gokul" , "mentee_count" : 11 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c67cb84fb465107430528")
+}
+> db.mentors.insertOne({ "mentor" : "Javed" , "mentee_count" : 12 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c67fc84fb465107430529")
+}
+> db.mentors.insertOne({ "mentor" : "RamKumar" , "mentee_count" : 13 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c681d84fb46510743052a")
+}
+> db.mentors.insertOne({ "mentor" : "Meera" , "mentee_count" : 14 });
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("613c685884fb46510743052b")
+}
+> db.mentors.find();
+{ "_id" : ObjectId("613c67b684fb465107430527"), "mentor" : "ratan", "mentee_count" : 10 }
+{ "_id" : ObjectId("613c67cb84fb465107430528"), "mentor" : "gokul", "mentee_count" : 11 }
+{ "_id" : ObjectId("613c67fc84fb465107430529"), "mentor" : "Javed", "mentee_count" : 12 }
+{ "_id" : ObjectId("613c681d84fb46510743052a"), "mentor" : "RamKumar", "mentee_count" : 13 }
+{ "_id" : ObjectId("613c685884fb46510743052b"), "mentor" : "Meera", "mentee_count" : 14 }
+
+
+
+1.Find all the topics and tasks which are thought in the month of October
+
+> db.topics.aggregate([ 
+	{ "$match" : { date : { $gte : ISODate("2020-10-01T00:00:00Z"), $lte : ISODate("2020-10-31T00:00:00Z") } } },  
+	{ "$lookup": 
+		{     "from": "tasks",     
+		      "localField": "date",     
+		      "foreignField":"date",     
+		      "as": "date"    
+		} 
+	} 
+  ]).pretty();
+
+{
+        "_id" : ObjectId("613c513284fb46510743050b"),
+        "topic" : "html",
+        "date" : [
+                {
+                        "_id" : ObjectId("613c5a4a84fb465107430510"),
+                        "task" : "create a web page",
+                        "date" : ISODate("2020-10-01T00:00:00Z"),
+                        "not_submitted" : 1
+                }
+        ]
+}
+{
+        "_id" : ObjectId("613c517184fb46510743050e"),
+        "topic" : "java",
+        "date" : [
+                {
+                        "_id" : ObjectId("613c5acf84fb465107430513"),
+                        "task" : "programming",
+                        "date" : ISODate("2020-10-21T00:00:00Z"),
+                        "not_submitted" : 4
+                }
+        ]
+}
+
+
+2.Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+
+> db.company_drives.find({ date : { $gte : ISODate("2020-10-15T00:00:00Z"), $lte : ISODate("2020-10-31T00:00:00Z") } },{ "company":1});
+{ "_id" : ObjectId("613c62cd84fb465107430520"), "company" : "d" }
+
+
+3.Find all the company drives and students who are appeared for the placement.
+
+> db.company_drives.find({},{"company":1,"students_attended":1});
+{ "_id" : ObjectId("613c625e84fb46510743051d"), "company" : "a", "students_attended" : [ "craig", "steel" ] }
+{ "_id" : ObjectId("613c627f84fb46510743051e"), "company" : "b", "students_attended" : [ "Grey", "Mirinda" ] }
+{ "_id" : ObjectId("613c62a684fb46510743051f"), "company" : "c", "students_attended" : [ "Grey", "John" ] }
+{ "_id" : ObjectId("613c62cd84fb465107430520"), "company" : "d", "students_attended" : [ "Mirinda", "John" ] }
+{ "_id" : ObjectId("613c630b84fb465107430521"), "company" : "e", "students_attended" : [ "steel", "craig" ] }
+
+
+4.Find the number of problems solved by the user in codekata
+
+> db.codekata.find({},{"name":1,"solved":1});
+{ "_id" : ObjectId("613c65c984fb465107430522"), "name" : "craig", "solved" : 15 }
+{ "_id" : ObjectId("613c65dc84fb465107430523"), "name" : "steel", "solved" : 18 }
+{ "_id" : ObjectId("613c65fe84fb465107430524"), "name" : "Grey", "solved" : 17 }
+{ "_id" : ObjectId("613c663584fb465107430525"), "name" : "Mirinda", "solved" : 16 }
+{ "_id" : ObjectId("613c665384fb465107430526"), "name" : "John", "solved" : 13 }
+
+
+5.Find all the mentors with who has the mentee's count more than 15
+
+> db.mentors.find( { "mentee_count" : { $gte : 15 } },{"mentor" : 1});
+{ "_id" : ObjectId("613c696684fb46510743052c"), "mentor" : "Aditi" }
+
+
+6.Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+> db.attendance.aggregate([ 
+	{ "$match" : { date : { $gte : ISODate("2020-10-15T00:00:00Z"), $lte : ISODate("2020-10-31T00:00:00Z") } } },  
+	{ "$lookup": 
+		{     
+			"from": "tasks",     
+			"localField": "date",     
+			"foreignField":"date",     
+			"as": "date"    
+		} 
+	} 
+   ]).pretty();
+
+{
+        "_id" : ObjectId("613c71c784fb465107430530"),
+        "date" : [
+                {
+                        "_id" : ObjectId("613c5acf84fb465107430513"),
+                        "task" : "programming",
+                        "date" : ISODate("2020-10-21T00:00:00Z"),
+                        "not_submitted" : 4
+                }
+        ],
+        "students_absent" : 4
+}
